@@ -1,0 +1,4 @@
+.glassList {
+  display: flex;
+  flex-wrap: wrap;
+}

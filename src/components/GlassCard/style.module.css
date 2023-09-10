@@ -1,0 +1,9 @@
+.glassCard {
+  flex: 1 1 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border: #731515 solid 1px;
+  margin: 1rem;
+}

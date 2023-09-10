@@ -1,0 +1,4 @@
+.cocktailList {
+  display: flex;
+  flex-direction: column;
+}
