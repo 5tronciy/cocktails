@@ -6,3 +6,35 @@
   border: #731515 solid 1px;
   margin: 1rem;
 }
+
+.imageWrapper {
+  flex: 1;
+}
+
+.image {
+  max-width: 100px;
+}
+
+.title {
+  flex: 0.7;
+}
+
+.ingredients {
+  flex: 2;
+}
+
+.receipt {
+  flex: 3;
+}
+
+.row {
+  display: flex;
+}
+
+.ingredientName {
+  flex: 2;
+}
+
+.ingredientCount {
+  flex: 1;
+}

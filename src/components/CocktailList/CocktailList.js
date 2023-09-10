@@ -6,8 +6,14 @@ import styles from './style.module.css';
 const CocktailList = () => {
   return (
     <div className={styles.cocktailList}>
-      {cocktails.map((_, index) => (
-        <CocktailCard key={index} />
+      {cocktails.map((item, index) => (
+        <CocktailCard
+          key={index}
+          src={item.src}
+          name={item.name}
+          composition={item.composition}
+          receipt={item.receipt}
+        />
       ))}
     </div>
   );
