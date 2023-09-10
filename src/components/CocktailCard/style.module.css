@@ -5,6 +5,7 @@
   padding: 1rem;
   border: #731515 solid 1px;
   margin: 1rem;
+  gap: 1rem;
 }
 
 .imageWrapper {
@@ -12,7 +13,7 @@
 }
 
 .image {
-  max-width: 100px;
+  width: 100%;
 }
 
 .title {
@@ -29,10 +30,19 @@
 
 .row {
   display: flex;
+  gap: 1rem;
+}
+
+.ingredientIconWrapper {
+  flex: 0.2;
+}
+
+.ingredientIcon {
+  width: 100%;
 }
 
 .ingredientName {
-  flex: 2;
+  flex: 3;
 }
 
 .ingredientCount {

@@ -1,770 +1,194 @@
-const products = [
-  {
-    name: 'джин',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'абрикосовый ликер',
-    icon: 'images/apricot.svg',
-  },
-  {
-    name: 'апельсиновый сок',
-    icon: 'images/orange-juice.svg',
-  },
-  {
-    name: 'содовая',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'лайм',
-    icon: 'images/lime.svg',
-  },
-  {
-    name: 'холодный чай',
-    icon: 'images/tea.svg',
-  },
-  {
-    name: 'водка',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'лимон',
-    icon: 'images/lemon.svg',
-  },
-  {
-    name: 'лед в кубиках',
-    icon: 'images/ice.svg',
-  },
-  {
-    name: 'лимонный сок',
-    icon: 'images/lemon-juice.svg',
-  },
-  {
-    name: 'сахарный сироп',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'темный ром',
-    icon: 'images/dark-rum.svg',
-  },
-  {
-    name: 'лимонная цедра',
-    icon: 'images/lemon.svg',
-  },
-  {
-    name: 'имбирный эль',
-    icon: 'images/ginger-ale.svg',
-  },
-  {
-    name: 'апельсин',
-    icon: 'images/orange.svg',
-  },
-  {
-    name: 'шампанское',
-    icon: 'images/champagne.svg',
-  },
-  {
-    name: 'апельсиновая кожура и клубника',
-    icon: 'images/orange.svg',
-  },
-  {
-    name: 'клюквенный сок',
-    icon: 'images/cranberry-juice.svg',
-  },
-  {
-    name: 'персиковый сок',
-    icon: 'images/peach-juice.svg',
-  },
-  {
-    name: 'ром',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'ананасовый сок',
-    icon: 'images/pineapple-juice.svg',
-  },
-  {
-    name: 'кокосовое пюре',
-    icon: 'images/coconut.svg',
-  },
-  {
-    name: 'ликер блю кюрасао',
-    icon: 'images/blue.svg',
-  },
-  {
-    name: 'лед',
-    icon: 'images/ice.svg',
-  },
-  {
-    name: 'нежирные сливки',
-    icon: 'images/cream.svg',
-  },
-  {
-    name: 'кофейный ликер',
-    icon: 'images/coffee-liquor.svg',
-  },
-  {
-    name: 'апероль',
-    icon: 'images/aperol.svg',
-  },
-  {
-    name: 'просекко',
-    icon: 'images/prosecco.svg',
-  },
-  {
-    name: 'сухой вермут',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'оливки',
-    icon: 'images/olive.svg',
-  },
-  {
-    name: 'коньяк',
-    icon: 'images/cognac.svg',
-  },
-  {
-    name: 'лимонад',
-    icon: 'images/lemon-juice.svg',
-  },
-  {
-    name: 'имбирь',
-    icon: 'images/ginger.svg',
-  },
-  {
-    name: 'кожура огурца',
-    icon: 'images/peel-cucumber.svg',
-  },
-  {
-    name: 'томатный сок',
-    icon: 'images/tomato.svg',
-  },
-  {
-    name: 'соус "Вотчестер"',
-    icon: 'images/tomato.svg',
-  },
-  {
-    name: 'соус "Табаско"',
-    icon: 'images/tomato.svg',
-  },
-  {
-    name: 'соль',
-    icon: 'images/salt.svg',
-  },
-  {
-    name: 'сухое шампанское',
-    icon: 'images/champagne.svg',
-  },
-  {
-    name: 'ликер из черной смородины',
-    icon: 'images/tomato.svg',
-  },
-  {
-    name: 'мандарин',
-    icon: 'images/orange.svg',
-  },
-  {
-    name: 'лондонский сухой джин',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'зеленый базилик',
-    icon: 'images/basil.svg',
-  },
-  {
-    name: 'черный чай',
-    icon: 'images/tea.svg',
-  },
-  {
-    name: 'белый ром',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'гвоздика',
-    icon: 'images/clove.svg',
-  },
-  {
-    name: 'кардамон',
-    icon: 'images/cardamom.svg',
-  },
-  {
-    name: 'вино белое',
-    icon: 'images/white-vine.svg',
-  },
-  {
-    name: 'виноград',
-    icon: 'images/grape.svg',
-  },
-  {
-    name: 'тоник',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'лаймовый кордиал',
-    icon: 'images/lime-juice.svg',
-  },
-  {
-    name: 'лаймовая цедра',
-    icon: 'images/lime.svg',
-  },
-  {
-    name: 'белое сухое вино',
-    icon: 'images/champagne.svg',
-  },
-  {
-    name: 'лаймовый сок',
-    icon: 'images/lime-juice.svg',
-  },
-  {
-    name: 'свежий арбуз',
-    icon: 'images/watermelon.svg',
-  },
-  {
-    name: 'мята',
-    icon: 'images/mint.svg',
-  },
-  {
-    name: 'дробленый лед',
-    icon: 'images/ice.svg',
-  },
-  {
-    name: 'кола',
-    icon: 'images/coffee-liquor.svg',
-  },
-  {
-    name: 'золотой ром',
-    icon: 'images/gold-rum.svg',
-  },
-  {
-    name: 'кашаса',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'грейпфрутовый сок',
-    icon: 'images/grenadine.svg',
-  },
-  {
-    name: 'биттер',
-    icon: 'images/bitter.svg',
-  },
-  {
-    name: 'кальвадос',
-    icon: 'images/apricot.svg',
-  },
-  {
-    name: 'гренадин',
-    icon: 'images/grenadine.svg',
-  },
-  {
-    name: 'газированная вода',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'сок красного апельсина',
-    icon: 'images/aperol.svg',
-  },
-  {
-    name: 'сок манго',
-    icon: 'images/orange-juice.svg',
-  },
-  {
-    name: 'соус "Табаско" красный',
-    icon: 'images/tomato.svg',
-  },
-  {
-    name: 'самбука классическая',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'серебряная текила',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'абсент',
-    icon: 'images/absinthe.svg',
-  },
-  {
-    name: 'айриш крим',
-    icon: 'images/irish-creame.svg',
-  },
-  {
-    name: 'шотландский виски',
-    icon: 'images/amaretto.svg',
-  },
-  {
-    name: 'ликер амаретто',
-    icon: 'images/amaretto.svg',
-  },
-  {
-    name: 'сироп ваниль',
-    icon: 'images/vanilla.svg',
-  },
-  {
-    name: 'сироп клюква',
-    icon: 'images/cranberry-juice.svg',
-  },
-  {
-    name: 'медовый сироп',
-    icon: 'images/orange-juice.svg',
-  },
-  {
-    name: 'банан',
-    icon: 'images/banana.svg',
-  },
-  {
-    name: 'коктейльная вишня',
-    icon: 'images/cherry.svg',
-  },
-  {
-    name: 'карамельный сироп',
-    icon: 'images/vanilla.svg',
-  },
-  {
-    name: 'кофе эспрессо',
-    icon: 'images/coffee-liquor.svg',
-  },
-  {
-    name: 'ликер трипл сек',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'персиковое пюре',
-    icon: 'images/peach.svg',
-  },
-  {
-    name: 'выдержанный бурбон',
-    icon: 'images/amaretto.svg',
-  },
-  {
-    name: 'ангостура',
-    icon: 'images/tomato.svg',
-  },
-  {
-    name: 'сахарная пудра',
-    icon: 'images/powdered.svg',
-  },
-  {
-    name: 'гальяно',
-    icon: 'images/lemon-juice.svg',
-  },
-  {
-    name: 'персиковый ликер',
-    icon: 'images/peach-juice.svg',
-  },
-  {
-    name: 'ананас',
-    icon: 'images/pineapple.svg',
-  },
-  {
-    name: 'малина',
-    icon: 'images/raspberry.svg',
-  },
-  {
-    name: 'ржаной виски',
-    icon: 'images/amaretto.svg',
-  },
-  {
-    name: 'вермут красный',
-    icon: 'images/vermouth.svg',
-  },
-  {
-    name: 'campari',
-    icon: 'images/vermouth.svg',
-  },
-  {
-    name: 'спрайт',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'трипл сек',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'ирландский виски',
-    icon: 'images/amaretto.svg',
-  },
-  {
-    name: 'кофе американо',
-    icon: 'images/coffe.svg',
-  },
-  {
-    name: 'жирные сливки',
-    icon: 'images/cream.svg',
-  },
-  {
-    name: 'домашний медовый-имбирный сироп',
-    icon: 'images/orange-juice.svg',
-  },
-  {
-    name: 'апельсиновая цедра',
-    icon: 'images/orange.svg',
-  },
-  {
-    name: 'lillet blanc',
-    icon: 'images/lemon-juice.svg',
-  },
-  {
-    name: "rimm's'",
-    icon: 'images/tomato.svg',
-  },
-  {
-    name: 'свежий огурец',
-    icon: 'images/cucumber.svg',
-  },
-  {
-    name: 'свежая клубника',
-    icon: 'images/strawberry.svg',
-  },
-  {
-    name: 'свежий лимон',
-    icon: 'images/lemon.svg',
-  },
-  {
-    name: 'свежий апельсин',
-    icon: 'images/orange.svg',
-  },
-  {
-    name: 'бурбон',
-    icon: 'images/amaretto.svg',
-  },
-  {
-    name: 'красный вермут',
-    icon: 'images/vermouth.svg',
-  },
-  {
-    name: 'ангостура биттер',
-    icon: 'images/orange-juice.svg',
-  },
-  {
-    name: 'какао ликер коричневый',
-    icon: 'images/amaretto.svg',
-  },
-  {
-    name: 'мускатный орех молотый',
-    icon: 'images/nutmeg.svg',
-  },
-  {
-    name: 'маракуйя',
-    icon: 'images/passion-fruit.svg',
-  },
-  {
-    name: 'красное сухое вино',
-    icon: 'images/vermouth.svg',
-  },
-  {
-    name: 'ванильный сахар',
-    icon: 'images/vanilla-sugar.svg',
-  },
-  {
-    name: 'апельсины',
-    icon: 'images/orange.svg',
-  },
-  {
-    name: 'клубника',
-    icon: 'images/strawberry.svg',
-  },
-  {
-    name: 'ежевика',
-    icon: 'images/blackberry.svg',
-  },
-  {
-    name: 'черника',
-    icon: 'images/blueberries.svg',
-  },
-  {
-    name: 'палочки корицы',
-    icon: 'images/cinnamon.svg',
-  },
-  {
-    name: 'персиковый биттер',
-    icon: 'images/peach-juice.svg',
-  },
-  {
-    name: 'сливочный ликер',
-    icon: 'images/creamy-liquor.svg',
-  },
-  {
-    name: 'виски',
-    icon: 'images/orange-juice.svg',
-  },
-  {
-    name: 'самбука',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'апельсиновый ликер',
-    icon: 'images/orange-juice.svg',
-  },
-  {
-    name: 'красный биттер campari',
-    icon: 'images/vermouth.svg',
-  },
-  {
-    name: 'ежевика свежая',
-    icon: 'images/blackberry.svg',
-  },
-  {
-    name: 'сахар',
-    icon: 'images/vanilla-sugar.svg',
-  },
-  {
-    name: 'белок перепелинового яйца',
-    icon: 'images/egg.svg',
-  },
-  {
-    name: 'писко',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'кокосовый ликер',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'ванильный сироп',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'кокосовая стружка',
-    icon: 'images/coconut.svg',
-  },
-  {
-    name: 'кофе в зернах',
-    icon: 'images/coffe.svg',
-  },
-  {
-    name: 'тросниковый сахар',
-    icon: 'images/vanilla-sugar.svg',
-  },
-  {
-    name: 'белый ментоловый ликер',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'клюква',
-    icon: 'images/cranberry.svg',
-  },
-  {
-    name: 'односолодовый виски',
-    icon: 'images/orange-juice.svg',
-  },
-  {
-    name: 'ревеневый ликер',
-    icon: 'images/peach-juice.svg',
-  },
-  {
-    name: 'клубничный сироп',
-    icon: 'images/tomato.svg',
-  },
-  {
-    name: 'кокосовый сироп',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'ликер малибу',
-    icon: 'images/cream.svg',
-  },
-  {
-    name: 'яичный желток',
-    icon: 'images/egg.svg',
-  },
-  {
-    name: 'молоко',
-    icon: 'images/cream.svg',
-  },
-  {
-    name: 'мускатный орех',
-    icon: 'images/nutmeg.svg',
-  },
-  {
-    name: 'светлый ром',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'ароматизированная водка',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'малиновый ликер',
-    icon: 'images/cranberry-juice.svg',
-  },
-  {
-    name: 'имбирное пиво',
-    icon: 'images/ginger-ale.svg',
-  },
-  {
-    name: 'темный ром bacardi',
-    icon: 'images/dark-rum.svg',
-  },
-  {
-    name: 'белый ром bacardi',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'ликер драй оранж',
-    icon: 'images/orange-juice.svg',
-  },
-  {
-    name: 'ликер фалернум',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'ананасовые листья',
-    icon: 'images/pineapple-leafs.svg',
-  },
-  {
-    name: 'ликер бейлис',
-    icon: 'images/irish-creame.svg',
-  },
-  {
-    name: 'ликер куантро',
-    icon: 'images/orange-juice.svg',
-  },
-  {
-    name: 'ликер гран марнье',
-    icon: 'images/lemon-juice.svg',
-  },
-  {
-    name: 'зеленый шартрез',
-    icon: 'images/ginger-ale.svg',
-  },
-  {
-    name: 'ликер мараскино',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'бенедиктин',
-    icon: 'images/amaretto.svg',
-  },
-  {
-    name: 'вишневый ликер',
-    icon: 'images/tomato.svg',
-  },
-  {
-    name: 'яблочный ликер зеленый',
-    icon: 'images/apple-juice.svg',
-  },
-  {
-    name: 'яблоки',
-    icon: 'images/apple.svg',
-  },
-  {
-    name: 'абсент зеленый',
-    icon: 'images/absinthe.svg',
-  },
-  {
-    name: 'абсент черный',
-    icon: 'images/coffee-liquor.svg',
-  },
-  {
-    name: 'водка черная',
-    icon: 'images/coffee-liquor.svg',
-  },
-  {
-    name: 'водка конопляная',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'спрайт и сок лимона',
-    icon: 'images/lemon-juice.svg',
-  },
-  {
-    name: 'ежевичный ликер',
-    icon: 'images/coffee-liquor.svg',
-  },
-  {
-    name: 'сахарный песок',
-    icon: 'images/powdered.svg',
-  },
-  {
-    name: 'выдержанный ром',
-    icon: 'images/amaretto.svg',
-  },
-  {
-    name: 'миндальный сироп',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'сверхкрепкий ром',
-    icon: 'images/amaretto.svg',
-  },
-  {
-    name: 'сироп корицы',
-    icon: 'images/tomato.svg',
-  },
-  {
-    name: 'грейпфрут',
-    icon: 'images/grapefruit.svg',
-  },
-  {
-    name: 'фиалковый ликер',
-    icon: 'images/violet.svg',
-  },
-  {
-    name: 'светлое пиво',
-    icon: 'images/cognac.svg',
-  },
-  {
-    name: 'устричный соус',
-    icon: 'images/coffee-liquor.svg',
-  },
-  {
-    name: 'вустерширский соус',
-    icon: 'images/coffee-liquor.svg',
-  },
-  {
-    name: 'дженевер',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'драмбуи',
-    icon: 'images/orange-juice.svg',
-  },
-  {
-    name: 'пишо биттер',
-    icon: 'images/tomato.svg',
-  },
-  {
-    name: 'сахар в кубиках',
-    icon: 'images/vanilla-sugar.svg',
-  },
-  {
-    name: 'цитрусовая водка',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'домашняя клубничная текила',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'дынный ликер',
-    icon: 'images/absinthe.svg',
-  },
-  {
-    name: 'энергетик',
-    icon: 'images/energy.svg',
-  },
-  {
-    name: 'яблочная водка',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'сироп гренадин',
-    icon: 'images/grenadine.svg',
-  },
-  {
-    name: 'яичный белок',
-    icon: 'images/egg.svg',
-  },
-  {
-    name: 'какао ликер светлый',
-    icon: 'images/vodka.svg',
-  },
-  {
-    name: 'мятный ликер зеленый',
-    icon: 'images/lime-juice.svg',
-  },
-  {
-    name: 'сироп маракуйи',
-    icon: 'images/orange-juice.svg',
-  },
-];
+export const productIcon = {
+  джин: 'images/vodka.svg',
+  'абрикосовый ликер': 'images/apricot.svg',
+  'апельсиновый сок': 'images/orange-juice.svg',
+  содовая: 'images/vodka.svg',
+  лайм: 'images/lime.svg',
+  'холодный чай': 'images/tea.svg',
+  водка: 'images/vodka.svg',
+  лимон: 'images/lemon.svg',
+  'лед в кубиках': 'images/ice.svg',
+  'лимонный сок': 'images/lemon-juice.svg',
+  'сахарный сироп': 'images/vodka.svg',
+  'темный ром': 'images/dark-rum.svg',
+  'лимонная цедра': 'images/lemon.svg',
+  'имбирный эль': 'images/ginger-ale.svg',
+  апельсин: 'images/orange.svg',
+  шампанское: 'images/champagne.svg',
+  'апельсиновая кожура и клубника': 'images/orange.svg',
+  'клюквенный сок': 'images/cranberry-juice.svg',
+  'персиковый сок': 'images/peach-juice.svg',
+  ром: 'images/vodka.svg',
+  'ананасовый сок': 'images/pineapple-juice.svg',
+  'кокосовое пюре': 'images/coconut.svg',
+  'ликер блю кюрасао': 'images/blue.svg',
+  лед: 'images/ice.svg',
+  'нежирные сливки': 'images/cream.svg',
+  'кофейный ликер': 'images/coffee-liquor.svg',
+  апероль: 'images/aperol.svg',
+  просекко: 'images/prosecco.svg',
+  'сухой вермут': 'images/vodka.svg',
+  оливки: 'images/olive.svg',
+  коньяк: 'images/cognac.svg',
+  лимонад: 'images/lemon-juice.svg',
+  имбирь: 'images/ginger.svg',
+  'кожура огурца': 'images/peel-cucumber.svg',
+  'томатный сок': 'images/tomato.svg',
+  'соус "Вотчестер"': 'images/tomato.svg',
+  'соус "Табаско"': 'images/tomato.svg',
+  соль: 'images/salt.svg',
+  'сухое шампанское': 'images/champagne.svg',
+  'ликер из черной смородины': 'images/tomato.svg',
+  мандарин: 'images/orange.svg',
+  'лондонский сухой джин': 'images/vodka.svg',
+  'зеленый базилик': 'images/basil.svg',
+  'черный чай': 'images/tea.svg',
+  'белый ром': 'images/vodka.svg',
+  гвоздика: 'images/clove.svg',
+  кардамон: 'images/cardamom.svg',
+  'вино белое': 'images/white-vine.svg',
+  виноград: 'images/grape.svg',
+  тоник: 'images/vodka.svg',
+  'лаймовый кордиал': 'images/lime-juice.svg',
+  'лаймовая цедра': 'images/lime.svg',
+  'белое сухое вино': 'images/champagne.svg',
+  'лаймовый сок': 'images/lime-juice.svg',
+  'свежий арбуз': 'images/watermelon.svg',
+  мята: 'images/mint.svg',
+  'дробленый лед': 'images/ice.svg',
+  кола: 'images/coffee-liquor.svg',
+  'золотой ром': 'images/gold-rum.svg',
+  кашаса: 'images/vodka.svg',
+  'грейпфрутовый сок': 'images/grenadine.svg',
+  биттер: 'images/bitter.svg',
+  кальвадос: 'images/apricot.svg',
+  гренадин: 'images/grenadine.svg',
+  'газированная вода': 'images/vodka.svg',
+  'сок красного апельсина': 'images/aperol.svg',
+  'сок манго': 'images/orange-juice.svg',
+  'соус "Табаско" красный': 'images/tomato.svg',
+  'самбука классическая': 'images/vodka.svg',
+  'серебряная текила': 'images/vodka.svg',
+  абсент: 'images/absinthe.svg',
+  'айриш крим': 'images/irish-creame.svg',
+  'шотландский виски': 'images/amaretto.svg',
+  'ликер амаретто': 'images/amaretto.svg',
+  'сироп ваниль': 'images/vanilla.svg',
+  'сироп клюква': 'images/cranberry-juice.svg',
+  'медовый сироп': 'images/orange-juice.svg',
+  банан: 'images/banana.svg',
+  'коктейльная вишня': 'images/cherry.svg',
+  'карамельный сироп': 'images/vanilla.svg',
+  'кофе эспрессо': 'images/coffee-liquor.svg',
+  'ликер трипл сек': 'images/vodka.svg',
+  'персиковое пюре': 'images/peach.svg',
+  'выдержанный бурбон': 'images/amaretto.svg',
+  ангостура: 'images/tomato.svg',
+  'сахарная пудра': 'images/powdered.svg',
+  гальяно: 'images/lemon-juice.svg',
+  'персиковый ликер': 'images/peach-juice.svg',
+  ананас: 'images/pineapple.svg',
+  малина: 'images/raspberry.svg',
+  'ржаной виски': 'images/amaretto.svg',
+  'вермут красный': 'images/vermouth.svg',
+  campari: 'images/vermouth.svg',
+  спрайт: 'images/vodka.svg',
+  'трипл сек': 'images/vodka.svg',
+  'ирландский виски': 'images/amaretto.svg',
+  'кофе американо': 'images/coffe.svg',
+  'жирные сливки': 'images/cream.svg',
+  'домашний медовый-имбирный сироп': 'images/orange-juice.svg',
+  'апельсиновая цедра': 'images/orange.svg',
+  'lillet blanc': 'images/lemon-juice.svg',
+  "rimm's'": 'images/tomato.svg',
+  'свежий огурец': 'images/cucumber.svg',
+  'свежая клубника': 'images/strawberry.svg',
+  'свежий лимон': 'images/lemon.svg',
+  'свежий апельсин': 'images/orange.svg',
+  бурбон: 'images/amaretto.svg',
+  'красный вермут': 'images/vermouth.svg',
+  'ангостура биттер': 'images/orange-juice.svg',
+  'какао ликер коричневый': 'images/amaretto.svg',
+  'мускатный орех молотый': 'images/nutmeg.svg',
+  маракуйя: 'images/passion-fruit.svg',
+  'красное сухое вино': 'images/vermouth.svg',
+  'ванильный сахар': 'images/vanilla-sugar.svg',
+  апельсины: 'images/orange.svg',
+  клубника: 'images/strawberry.svg',
+  ежевика: 'images/blackberry.svg',
+  черника: 'images/blueberries.svg',
+  'палочки корицы': 'images/cinnamon.svg',
+  'персиковый биттер': 'images/peach-juice.svg',
+  'сливочный ликер': 'images/creamy-liquor.svg',
+  виски: 'images/orange-juice.svg',
+  самбука: 'images/vodka.svg',
+  'апельсиновый ликер': 'images/orange-juice.svg',
+  'красный биттер campari': 'images/vermouth.svg',
+  'ежевика свежая': 'images/blackberry.svg',
+  сахар: 'images/vanilla-sugar.svg',
+  'белок перепелинового яйца': 'images/egg.svg',
+  писко: 'images/vodka.svg',
+  'кокосовый ликер': 'images/vodka.svg',
+  'ванильный сироп': 'images/vodka.svg',
+  'кокосовая стружка': 'images/coconut.svg',
+  'кофе в зернах': 'images/coffe.svg',
+  'тросниковый сахар': 'images/vanilla-sugar.svg',
+  'белый ментоловый ликер': 'images/vodka.svg',
+  клюква: 'images/cranberry.svg',
+  'односолодовый виски': 'images/orange-juice.svg',
+  'ревеневый ликер': 'images/peach-juice.svg',
+  'клубничный сироп': 'images/tomato.svg',
+  'кокосовый сироп': 'images/vodka.svg',
+  'ликер малибу': 'images/cream.svg',
+  'яичный желток': 'images/egg.svg',
+  молоко: 'images/cream.svg',
+  'мускатный орех': 'images/nutmeg.svg',
+  'светлый ром': 'images/vodka.svg',
+  'ароматизированная водка': 'images/vodka.svg',
+  'малиновый ликер': 'images/cranberry-juice.svg',
+  'имбирное пиво': 'images/ginger-ale.svg',
+  'темный ром bacardi': 'images/dark-rum.svg',
+  'белый ром bacardi': 'images/vodka.svg',
+  'ликер драй оранж': 'images/orange-juice.svg',
+  'ликер фалернум': 'images/vodka.svg',
+  'ананасовые листья': 'images/pineapple-leafs.svg',
+  'ликер бейлис': 'images/irish-creame.svg',
+  'ликер куантро': 'images/orange-juice.svg',
+  'ликер гран марнье': 'images/lemon-juice.svg',
+  'зеленый шартрез': 'images/ginger-ale.svg',
+  'ликер мараскино': 'images/vodka.svg',
+  бенедиктин: 'images/amaretto.svg',
+  'вишневый ликер': 'images/tomato.svg',
+  'яблочный ликер зеленый': 'images/apple-juice.svg',
+  яблоки: 'images/apple.svg',
+  'абсент зеленый': 'images/absinthe.svg',
+  'абсент черный': 'images/coffee-liquor.svg',
+  'водка черная': 'images/coffee-liquor.svg',
+  'водка конопляная': 'images/vodka.svg',
+  'спрайт и сок лимона': 'images/lemon-juice.svg',
+  'ежевичный ликер': 'images/coffee-liquor.svg',
+  'сахарный песок': 'images/powdered.svg',
+  'выдержанный ром': 'images/amaretto.svg',
+  'миндальный сироп': 'images/vodka.svg',
+  'сверхкрепкий ром': 'images/amaretto.svg',
+  'сироп корицы': 'images/tomato.svg',
+  грейпфрут: 'images/grapefruit.svg',
+  'фиалковый ликер': 'images/violet.svg',
+  'светлое пиво': 'images/cognac.svg',
+  'устричный соус': 'images/coffee-liquor.svg',
+  'вустерширский соус': 'images/coffee-liquor.svg',
+  дженевер: 'images/vodka.svg',
+  драмбуи: 'images/orange-juice.svg',
+  'пишо биттер': 'images/tomato.svg',
+  'сахар в кубиках': 'images/vanilla-sugar.svg',
+  'цитрусовая водка': 'images/vodka.svg',
+  'домашняя клубничная текила': 'images/vodka.svg',
+  'дынный ликер': 'images/absinthe.svg',
+  энергетик: 'images/energy.svg',
+  'яблочная водка': 'images/vodka.svg',
+  'сироп гренадин': 'images/grenadine.svg',
+  'яичный белок': 'images/egg.svg',
+  'какао ликер светлый': 'images/vodka.svg',
+  'мятный ликер зеленый': 'images/lime-juice.svg',
+  'сироп маракуйи': 'images/orange-juice.svg',
+};
