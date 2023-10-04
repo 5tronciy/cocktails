@@ -1,122 +1,122 @@
 export const glasses = [
   {
-    src: 'images/glasses/glass-wine.png',
+    src: 'images/glass-wine.png',
     name: 'Бокал для вина',
   },
   {
-    src: 'images/glasses/glass-wisky.png',
+    src: 'images/glass-wisky.png',
     name: 'Бокал для виски',
   },
   {
-    src: 'images/glasses/glass-irish-coffee.png',
+    src: 'images/glass-irish-coffee.png',
     name: 'Бокал для ирландского кофе',
   },
   {
-    src: 'images/glasses/glass-margarita.png',
+    src: 'images/glass-margarita.png',
     name: 'Бокал для маргариты',
   },
   {
-    src: 'images/glasses/glass-sauer.png',
+    src: 'images/glass-sauer.png',
     name: 'Бокал сауэр',
   },
   {
-    src: 'images/glasses/glass-cylinder.png',
+    src: 'images/glass-cylinder.png',
     name: 'Бокал цилиндрической формы',
   },
   {
-    src: 'images/glasses/Burner.png',
+    src: 'images/Burner.png',
     name: 'Горелка',
   },
   {
-    src: 'images/glasses/cocktail-spoon.png',
+    src: 'images/cocktail-spoon.png',
     name: 'Коктейльная ложка',
   },
   {
-    src: 'images/glasses/cocktail-wineglass.png',
+    src: 'images/cocktail-wineglass.png',
     name: 'Коктейльный бокал',
   },
   {
-    src: 'images/glasses/collins.png',
+    src: 'images/collins.png',
     name: 'Коллинз',
   },
   {
-    src: 'images/glasses/madlers.png',
+    src: 'images/madlers.png',
     name: 'Мадлеры барные',
   },
   {
-    src: 'images/glasses/copper-mug.png',
+    src: 'images/copper-mug.png',
     name: 'Медная кружка',
   },
   {
-    src: 'images/glasses/zest-knife.png',
+    src: 'images/zest-knife.png',
     name: 'Нож для цедры',
   },
   {
-    src: 'images/glasses/glass-beer.png',
+    src: 'images/glass-beer.png',
     name: 'Пивной бокал',
   },
   {
-    src: 'images/glasses/press.png',
+    src: 'images/press.png',
     name: 'Пресс для цитрусовых',
   },
   {
-    src: 'images/glasses/rox.png',
+    src: 'images/rox.png',
     name: 'Рокс',
   },
   {
-    src: 'images/glasses/Strainer.png',
+    src: 'images/Strainer.png',
     name: 'Ситечко',
   },
   {
-    src: 'images/glasses/sling.png',
+    src: 'images/sling.png',
     name: 'слинг',
   },
   {
-    src: 'images/glasses/glass-mixer.png',
+    src: 'images/glass-mixer.png',
     name: 'Стакан для смешивания',
   },
   {
-    src: 'images/glasses/Stack.png',
+    src: 'images/Stack.png',
     name: 'Стопка',
   },
   {
-    src: 'images/glasses/Strainer2.png',
+    src: 'images/Strainer2.png',
     name: 'Стрейнер',
   },
   {
-    src: 'images/glasses/glass-tiki.png',
+    src: 'images/glass-tiki.png',
     name: 'Тики-бокал',
   },
   {
-    src: 'images/glasses/tumbler.png',
+    src: 'images/tumbler.png',
     name: 'Тумблер',
   },
   {
-    src: 'images/glasses/Flute.png',
+    src: 'images/Flute.png',
     name: 'Флюте',
   },
   {
-    src: 'images/glasses/french-press.png',
+    src: 'images/french-press.png',
     name: 'Френч-пресс',
   },
   {
-    src: 'images/glasses/Highball.png',
+    src: 'images/Highball.png',
     name: 'Хайбол',
   },
   {
-    src: 'images/glasses/Hurricane.png',
+    src: 'images/Hurricane.png',
     name: 'Харрикейн',
   },
   {
-    src: 'images/glasses/champagne-saucer.png',
+    src: 'images/champagne-saucer.png',
     name: 'Шампанское блюдце',
   },
   {
-    src: 'images/glasses/shaker.png',
+    src: 'images/shaker.png',
     name: 'Шейкер',
   },
   {
-    src: 'images/glasses/Skewers.png',
+    src: 'images/Skewers.png',
     name: 'Шпажки',
   },
 ];

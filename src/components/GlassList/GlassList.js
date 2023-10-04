@@ -6,8 +6,8 @@ import styles from './style.module.css';
 const GlassList = () => {
   return (
     <div className={styles.glassList}>
-      {glasses.map((_, index) => (
-        <GlassCard key={index} />
+      {glasses.map((item, index) => (
+        <GlassCard key={index} src={item.src} name={item.name} />
       ))}
     </div>
   );
